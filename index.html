@@ -52,10 +52,12 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.1}
 .hbtn{font:500 13px var(--body);padding:6px 11px;border-radius:7px;border:1px solid var(--line);background:var(--surface);color:var(--ink);text-decoration:none;cursor:pointer}
 .hbtn:hover{border-color:var(--accent);color:var(--accent)}
 .hbtn .short{display:none}
+.hcv{display:inline-flex;align-items:center;gap:6px;background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.hcv:hover{color:var(--bg);opacity:.88}
 .hbtn.icon{display:inline-grid;place-items:center;width:32px;height:32px;padding:0}
 .hbtn.icon span{display:grid}
 .hbtn.icon .short{display:none}
-@media (max-width:640px){.hcontact code{display:none}.hbtn .full{display:none}.hbtn .short{display:inline}.hbtn.icon .short{display:grid}}
+@media (max-width:640px){.hcontact code{display:none}.hbtn .full{display:none}.hbtn .short{display:inline}.hbtn.icon .short{display:grid}.hbtn.icon .full{display:none}}
 .mark{display:flex;align-items:center;gap:6px 14px;flex-wrap:wrap}
 .mark b{font-family:var(--display);font-size:18px;font-weight:700;letter-spacing:-.01em}
 .mark .role{font-size:14px;color:var(--muted);padding-left:14px;border-left:1px solid var(--line)}
@@ -197,6 +199,7 @@ footer{padding-block:32px;border-top:1px solid var(--line);color:var(--muted);fo
     <div class="hcontact">
       <code id="hEmail">1deepakgehlot@gmail.com</code>
       <button type="button" class="hbtn icon" data-copy="hEmail" aria-label="Copy email address" title="Copy email address"><span class="full"><svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 15V6a2 2 0 0 1 2-2h8" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><span class="short"><svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="2"/></svg></span></button>
+      <a class="hbtn hcv" href="Deepak_Gehlot_Resume.pdf" download="Deepak_Gehlot_Resume.pdf"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Resume</span></a>
       <a class="hbtn" href="https://www.linkedin.com/in/deepak-gehlot-82933a91" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </header>
@@ -205,13 +208,14 @@ footer{padding-block:32px;border-top:1px solid var(--line);color:var(--muted);fo
     <div class="label">Flutter · AI integration · Python · Based in India</div>
     <h1>Deepak Gehlot<span>.</span></h1>
     <p class="thesis">I build production Flutter apps, and the AI features and Python backends behind them.</p>
-    <p class="sub">Production apps across banking, enterprise SaaS, government, media and event-tech. My depth is in offline-first data layers, native platform channels on iOS and Android, and Clean Architecture that holds up at hundreds of screens. On the AI side I build retrieval (RAG) and LLM features with LangChain and OpenAI, served from FastAPI and streamed into Flutter.</p>
+    <p class="sub">Production apps across banking, enterprise SaaS, government, media and event-tech. My depth is in offline-first data layers, native platform channels on iOS and Android, and Clean Architecture in large production codebases. On the AI side I build retrieval (RAG) and LLM features with LangChain and OpenAI, served from FastAPI and streamed into Flutter.</p>
     <div class="stats">
       <div class="stat"><b>10+</b><span>years in software</span></div>
-      <div class="stat"><b>6+</b><span>years shipping Flutter</span></div>
+      <div class="stat"><b>8+</b><span>years shipping Flutter</span></div>
     </div>
     <div class="cta">
       <a class="btn" href="#work">See case studies</a>
+      <a class="btn ghost" href="Deepak_Gehlot_Resume.pdf" download="Deepak_Gehlot_Resume.pdf">Download resume (PDF)</a>
       <a class="btn ghost" href="#contact">Get in touch</a>
     </div>
   </div>
@@ -253,7 +257,7 @@ footer{padding-block:32px;border-top:1px solid var(--line);color:var(--muted);fo
 
     <article class="case" data-cat="media">
       <div class="meta">
-        <div class="domain">Music · Mobile + Web</div>
+        <div class="domain">Music · Mobile + Web · Worthply</div>
         <div class="tags"><span class="tag">Jitsi</span><span class="tag">AWS EC2 / S3</span><span class="tag">Platform views</span><span class="tag">Flutter Web</span><span class="tag">FFmpeg</span></div>
       </div>
       <div class="body">
@@ -325,7 +329,7 @@ footer{padding-block:32px;border-top:1px solid var(--line);color:var(--muted);fo
 
     <article class="case" data-cat="media">
       <div class="meta">
-        <div class="domain">Kids &amp; education · South Korea</div>
+        <div class="domain">Kids &amp; education · South Korea · Worthply</div>
         <div class="tags"><span class="tag">Flutter</span><span class="tag">Offline caching</span><span class="tag">In-app purchases</span></div>
       </div>
       <div class="body">
@@ -370,15 +374,15 @@ footer{padding-block:32px;border-top:1px solid var(--line);color:var(--muted);fo
       <h2>Skills</h2>
     </div>
     <div class="skills">
-      <div class="skill"><h3>Architecture</h3><p>Clean Architecture and MVVM across 500+ screens, dependency injection with GetIt, feature-first modules.</p></div>
+      <div class="skill"><h3>Architecture</h3><p>Clean Architecture and MVVM, dependency injection with GetIt, feature-first modules.</p></div>
       <div class="skill"><h3>State management</h3><p>BLoC and Cubit by default, Provider and Riverpod where the codebase calls for it.</p></div>
       <div class="skill"><h3>Offline-first data</h3><p>Hive, SQLite, sync queues, conflict handling, cache-aside reads.</p></div>
       <div class="skill"><h3>Native integration</h3><p>Custom plugins, platform channels and platform views in Kotlin and Swift, device-specific debugging.</p></div>
-      <div class="skill"><h3>Security</h3><p>AES-256 at rest, short-lived JWTs, certificate pinning, BFF pattern for Flutter Web.</p></div>
+      <div class="skill"><h3>Security</h3><p>SSL pinning, short-lived JWTs, BFF pattern for Flutter Web.</p></div>
       <div class="skill"><h3>Performance</h3><p>Rebuild profiling, memory and startup time, app size, DevTools traces.</p></div>
       <div class="skill"><h3>Python backends</h3><p>FastAPI, async SQLAlchemy, Pydantic v2, PostgreSQL, Railway deploys, plus Firebase and REST integration.</p></div>
       <div class="skill"><h3>Delivery</h3><p>Play Store and App Store releases, CI/CD, unit, widget and integration tests.</p></div>
-      <div class="skill"><h3>AI and LLM apps</h3><p>RAG with LangChain, OpenAI embeddings and Pinecone, LangGraph agents, streamed responses in Flutter UIs.</p></div>
+      <div class="skill"><h3>AI and LLM apps</h3><p>RAG with LangChain, OpenAI embeddings and Pinecone, streamed LLM responses in Flutter UIs.</p></div>
     </div>
   </section>
 
@@ -398,7 +402,7 @@ footer{padding-block:32px;border-top:1px solid var(--line);color:var(--muted);fo
       </li>
       <li class="job">
         <div class="when">Apr 2018 – Nov 2022</div>
-        <div class="what"><h3>Senior Mobile Application Developer, Flutter / Android</h3><div class="co">Worthply Technologies Pvt. Ltd. · Indore</div><p>Cross-platform Flutter apps for Android and iOS with Provider and BLoC/Cubit. REST APIs, Firebase notifications, maps and location, payment gateways and media features.</p></div>
+        <div class="what"><h3>Senior Mobile Application Developer, Flutter / Android</h3><div class="co">Worthply Technologies Pvt. Ltd. · Indore</div><p>Cross-platform Flutter apps for Android and iOS with Provider and BLoC/Cubit. REST APIs, Firebase notifications, maps and location, payment gateways and media features. Apps include eRecordStudio, where I was also technical lead, and Webtoon.</p></div>
       </li>
       <li class="job">
         <div class="when">Dec 2016 – Apr 2018</div>
@@ -420,7 +424,7 @@ footer{padding-block:32px;border-top:1px solid var(--line);color:var(--muted);fo
       <div class="mail"><code id="email">1deepakgehlot@gmail.com</code><button class="copy" type="button" data-copy="email">Copy email</button></div>
       <div class="mail"><code id="phone">+91 88279 87615</code><button class="copy" type="button" data-copy="phone">Copy phone</button></div>
     </div>
-    <div class="stores"><a class="store" href="https://www.linkedin.com/in/deepak-gehlot-82933a91" target="_blank" rel="noopener">LinkedIn →</a></div>
+    <div class="stores"><a class="store" href="Deepak_Gehlot_Resume.pdf" download="Deepak_Gehlot_Resume.pdf"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Download resume (PDF)</a><a class="store" href="https://www.linkedin.com/in/deepak-gehlot-82933a91" target="_blank" rel="noopener">LinkedIn →</a></div>
   </section>
 
   <footer>
