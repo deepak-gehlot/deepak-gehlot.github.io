@@ -135,6 +135,7 @@ section{padding-block:56px;border-top:1px solid var(--line)}
 .shot img{display:block;width:100%;height:auto;aspect-ratio:auto}
 .shot:hover{border-color:var(--accent)}
 .shots figcaption{font-size:12.5px;color:var(--muted);line-height:1.4}
+.myrole{font-family:var(--mono);font-size:12.5px;color:var(--ok);margin-top:-4px}
 .conf{font-size:13.5px;color:var(--muted);font-style:italic}
 dialog.lb{border:0;padding:0;background:transparent;max-width:min(92vw,520px);max-height:94vh}
 dialog.lb::backdrop{background:rgba(8,12,16,.86)}
@@ -236,6 +237,7 @@ footer{padding-block:32px;border-top:1px solid var(--line);color:var(--muted);fo
       </div>
       <div class="body">
         <h3>OM Bank — digital banking app</h3>
+        <div class="myrole">Role: Flutter developer in the mobile team</div>
         <p>OM Bank is Old Mutual's digital bank in South Africa. I work in the mobile team shipping features across the app, from solution design through implementation to production support.</p>
         <ul>
           <li>Joined solution design discussions with product, backend and QA before each feature was built.</li>
@@ -252,12 +254,14 @@ footer{padding-block:32px;border-top:1px solid var(--line);color:var(--muted);fo
     <article class="case" data-cat="media">
       <div class="meta">
         <div class="domain">Music · Mobile + Web</div>
-        <div class="tags"><span class="tag">Jitsi</span><span class="tag">Platform views</span><span class="tag">Flutter Web</span><span class="tag">FFmpeg</span></div>
+        <div class="tags"><span class="tag">Jitsi</span><span class="tag">AWS EC2 / S3</span><span class="tag">Platform views</span><span class="tag">Flutter Web</span><span class="tag">FFmpeg</span></div>
       </div>
       <div class="body">
         <h3>eRecordStudio — rehearse and record together</h3>
-        <p>eRecordStudio lets musicians rehearse, record and share sessions online. I built the live video calling and recording pipeline inside the app, so bands never leave it to play together.</p>
+        <div class="myrole">Role: Sole frontend developer and technical lead</div>
+        <p>eRecordStudio lets musicians rehearse, record and share sessions online. I built the entire Flutter frontend and acted as the technical lead: I ran the technical discussions with the client, coordinated the backend developer, managed the AWS infrastructure (EC2 and S3), and handled App Store and Play Store releases.</p>
         <ul>
+          <li>Owned delivery end to end: client technical discussions, backend coordination, AWS EC2 and S3, and both store releases.</li>
           <li>Jitsi embedded through native platform views with method and event channels on iOS and Android, plus a Flutter Web build.</li>
           <li>Per-participant camera recording and upload.</li>
           <li>Server-side FFmpeg merge of all tracks into a single session video.</li>
@@ -279,7 +283,8 @@ footer{padding-block:32px;border-top:1px solid var(--line);color:var(--muted);fo
       </div>
       <div class="body">
         <h3>MeeTicket — public ticketing for Telangana</h3>
-        <p>A Government of Telangana app, published by the ITE&amp;C department's MeeSeva citizen services. One app for entry tickets to parks and temples and transport tickets for metro and bus. I worked on its ticketing features and API-driven purchase flows.</p>
+        <div class="myrole">Role: Sole frontend developer</div>
+        <p>A Government of Telangana app, published by the ITE&amp;C department's MeeSeva citizen services, for entry tickets to parks and temples and transport tickets for metro and bus. I built the whole Flutter frontend: login, destination browsing, ticket booking with per-category pricing, payment flow and QR tickets.</p>
         <div class="shots" role="list" aria-label="MeeTicket screenshots">
           <figure role="listitem"><button type="button" class="shot" data-cap="Mobile number and PIN login"><img src="images/meeticket-login.webp" alt="Mobile number and PIN login" width="463" height="925" loading="lazy" decoding="async"></button><figcaption>Mobile number and PIN login</figcaption></figure>
           <figure role="listitem"><button type="button" class="shot" data-cap="Home: metro, parks, temples, zoo and more"><img src="images/meeticket-home.webp" alt="Home: metro, parks, temples, zoo and more" width="466" height="941" loading="lazy" decoding="async"></button><figcaption>Home: metro, parks, temples, zoo and more</figcaption></figure>
@@ -299,7 +304,8 @@ footer{padding-block:32px;border-top:1px solid var(--line);color:var(--muted);fo
       </div>
       <div class="body">
         <h3>Eventum — event ticketing platform</h3>
-        <p>Eventum lets organisers build event pages, sell tickets, take payments and run onsite check-in, from yoga retreats to music festivals and conferences. I built responsive Flutter Web and mobile flows for event and session management and ticketing on Eventum and UMO Eventum.</p>
+        <div class="myrole">Role: Sole frontend developer</div>
+        <p>Eventum lets organisers build event pages, sell tickets, take payments and run onsite check-in, from yoga retreats to music festivals and conferences. I built the entire frontend for Eventum and UMO Eventum in Flutter Web and mobile: event and session management, ticketing and checkout.</p>
         <div class="stores"><a class="store" href="https://www.eventum.co/" target="_blank" rel="noopener"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm-9 9h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>eventum.co</a></div>
       </div>
     </article>
@@ -311,7 +317,8 @@ footer{padding-block:32px;border-top:1px solid var(--line);color:var(--muted);fo
       </div>
       <div class="body">
         <h3>iPlanned — estate planning</h3>
-        <p>Online estate planning: people create and manage their will and estate plan securely. I built Flutter Web and mobile flows on a feature-based structure with REST APIs.</p>
+        <div class="myrole">Role: Sole frontend developer</div>
+        <p>Online estate planning: people create and manage their will and estate plan securely. I built the entire Flutter Web and mobile frontend on a feature-based structure with REST APIs.</p>
         <div class="stores"><a class="store" href="https://www.iplanned.io/" target="_blank" rel="noopener"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm-9 9h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>iplanned.io</a></div>
       </div>
     </article>
@@ -323,7 +330,8 @@ footer{padding-block:32px;border-top:1px solid var(--line);color:var(--muted);fo
       </div>
       <div class="body">
         <h3>Webtoon — illustrated storybooks for children</h3>
-        <p>A children's storybook app from a South Korean publisher, pairing comic retellings of stories with illustrations. Storybooks are cached on the device so children can keep reading without downloading each book by hand, and full content unlocks through in-app purchases.</p>
+        <div class="myrole">Role: Sole Flutter developer</div>
+        <p>A children's storybook app for a South Korean publisher, pairing comic retellings of stories with illustrations. I built the entire Flutter app: the story library and reader, on-device caching so books open without manual downloads, and in-app purchases to unlock content.</p>
         <div class="outcome"><span><b>10K+</b> downloads on Google Play</span></div>
         <div class="stores"><a class="store" href="https://play.google.com/store/apps/details?id=com.webtoonkids.webtoonkids" target="_blank" rel="noopener"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path fill="currentColor" d="M4 2.5v19l10.2-9.5zM15.6 13.3 6.3 22l11.6-6.7zm0-2.6L17.9 8.6 6.3 2zM19.2 9.4l-2.5 2.6 2.5 2.6 2.4-1.4c.9-.5.9-1.9 0-2.4z"/></svg>Google Play</a></div>
       </div>
