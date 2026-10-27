@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Deepak Gehlot · Senior Flutter Developer</title>
+<meta name="description" content="Deepak Gehlot, Senior Flutter Developer with 10+ years in mobile. Production apps in banking, government, event-tech and media, plus AI features and Python backends.">
+<link rel="canonical" href="https://deepakgehlot.dev/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://deepakgehlot.dev/">
+<meta property="og:title" content="Deepak Gehlot · Senior Flutter Developer">
+<meta property="og:description" content="Deepak Gehlot, Senior Flutter Developer with 10+ years in mobile. Production apps in banking, government, event-tech and media, plus AI features and Python backends.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#EEF1F4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E151C" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2312202B'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='28' fill='%236F9BFF'%3EDG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a narrow reading column with a mono meta rail on wide screens; case studies read like engineering write-ups, not cards. */
+:root{
+  --bg:#EEF1F4; --surface:#FFFFFF; --ink:#12202B; --muted:#55636F; --line:#D3DAE1;
+  --accent:#1B5FD9; --accent-soft:#DCE7FB; --signal:#B25E00; --ok:#12804F; --bad:#B3261E;
+  --display:"Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --body:"IBM Plex Sans", -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E151C; --surface:#151F28; --ink:#E4EAF0; --muted:#93A1AE; --line:#26333F;
+  --accent:#6F9BFF; --accent-soft:#1A2A47; --signal:#F0A54A; --ok:#4CC38A; --bad:#F2867E; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E151C; --surface:#151F28; --ink:#E4EAF0; --muted:#93A1AE; --line:#26333F;
+  --accent:#6F9BFF; --accent-soft:#1A2A47; --signal:#F0A54A; --ok:#4CC38A; --bad:#F2867E; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+img{max-width:100%}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:980px;margin:0 auto}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.1}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+/* header */
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:24px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.top nav{display:flex;gap:20px;flex-wrap:wrap;font-size:14px}
+.top nav a{color:var(--ink);text-decoration:none}
+.top nav a:hover{color:var(--accent)}
+.hcontact{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.hcontact code{font-family:var(--mono);font-size:13px;user-select:all}
+.hbtn{font:500 13px var(--body);padding:6px 11px;border-radius:7px;border:1px solid var(--line);background:var(--surface);color:var(--ink);text-decoration:none;cursor:pointer}
+.hbtn:hover{border-color:var(--accent);color:var(--accent)}
+.hbtn .short{display:none}
+.hbtn.icon{display:inline-grid;place-items:center;width:32px;height:32px;padding:0}
+.hbtn.icon span{display:grid}
+.hbtn.icon .short{display:none}
+@media (max-width:640px){.hcontact code{display:none}.hbtn .full{display:none}.hbtn .short{display:inline}.hbtn.icon .short{display:grid}}
+.mark{display:flex;align-items:center;gap:6px 14px;flex-wrap:wrap}
+.mark b{font-family:var(--display);font-size:18px;font-weight:700;letter-spacing:-.01em}
+.mark .role{font-size:14px;color:var(--muted);padding-left:14px;border-left:1px solid var(--line)}
+.mark .avail{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:11.5px;padding:4px 9px;border-radius:999px;background:var(--accent-soft);color:var(--ink)}
+.mark .avail i{width:7px;height:7px;border-radius:50%;background:var(--ok)}
+
+/* hero */
+.hero{padding-block:64px 48px;display:grid;gap:28px}
+.hero h1{font-size:clamp(40px,7vw,76px);font-weight:800;letter-spacing:-.02em}
+.hero h1 span{color:var(--accent)}
+.thesis{font-size:clamp(18px,2.2vw,22px);max-width:40ch;color:var(--ink);margin:0}
+.hero .sub{color:var(--muted);max-width:62ch;margin:0}
+.stats{display:flex;flex-wrap:wrap;gap:12px 40px;padding-top:12px;border-top:1px solid var(--line)}
+.stat b{display:block;font-family:var(--display);font-size:32px;font-weight:700;font-variant-numeric:tabular-nums}
+.stat span{font-size:13px;color:var(--muted)}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{font:500 15px var(--body);padding:11px 18px;border-radius:8px;border:1px solid var(--ink);background:var(--ink);color:var(--bg);text-decoration:none;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn:hover{opacity:.88}
+
+/* sections */
+section{padding-block:56px;border-top:1px solid var(--line)}
+.sec-head{display:grid;gap:8px;margin-bottom:32px}
+.sec-head h2{font-size:clamp(28px,4vw,40px);font-weight:700}
+
+/* case studies */
+.case{display:grid;grid-template-columns:200px 1fr;gap:16px 40px;padding-block:32px;border-top:1px dashed var(--line)}
+.case:first-of-type{border-top:0;padding-top:0}
+.case .meta{display:grid;gap:10px;align-content:start}
+.case .meta .domain{font-family:var(--mono);font-size:12px;color:var(--signal)}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-family:var(--mono);font-size:11.5px;padding:3px 8px;border-radius:4px;background:var(--accent-soft);color:var(--ink)}
+.case .body{min-width:0;display:grid;gap:12px}
+.case h3{font-size:26px;font-weight:700}
+.case p{margin:0;max-width:65ch}
+.case ul{margin:0;padding-left:18px;max-width:65ch;display:grid;gap:6px}
+.outcome{display:flex;flex-wrap:wrap;gap:8px 24px;font-family:var(--mono);font-size:13px}
+.outcome b{color:var(--ok);font-weight:500}
+
+.stores{display:flex;flex-wrap:wrap;gap:8px;padding-top:4px}
+.store{display:inline-flex;align-items:center;gap:7px;font:500 13.5px var(--body);padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);text-decoration:none}
+.store:hover{border-color:var(--accent);color:var(--accent)}
+.contact-rows{display:grid;gap:10px}
+/* diagnostic table */
+.diag{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+.diag table{border-collapse:collapse;width:100%;min-width:520px;font-family:var(--mono);font-size:12.5px}
+.diag th,.diag td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
+.diag th{color:var(--muted);font-weight:500;font-size:11.5px;letter-spacing:.05em;text-transform:uppercase}
+.diag tr:last-child td{border-bottom:0}
+.diag td.same{color:var(--bad)}
+.diag caption{caption-side:bottom;text-align:left;padding:10px 12px;font-family:var(--body);font-size:13px;color:var(--muted);border-top:1px solid var(--line)}
+
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:-8px 0 28px}
+.chip{font:500 13.5px var(--body);padding:7px 13px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.chip span{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin-left:4px}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip[aria-pressed="true"] span{color:var(--bg);opacity:.7}
+.case[hidden]{display:none!important}
+.demo{border:1px solid var(--line);border-radius:10px;background:var(--surface);padding:16px;display:grid;gap:14px;margin-top:6px}
+.demo-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.demo-q{display:grid;gap:6px}
+.demo-q select{font:15px var(--body);padding:9px 10px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);max-width:100%}
+.demo-grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:16px}
+.demo-out p{margin:6px 0 0;min-height:7.5em;font-size:15px}
+.demo-out p.typing::after{content:"▍";color:var(--accent);animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.demo-log ol{list-style:none;margin:6px 0 0;padding:0;font-family:var(--mono);font-size:12px;display:grid;gap:4px;max-height:10em;overflow:auto}
+.demo-log li{color:var(--muted)}
+.demo-log li b{font-weight:500;color:var(--accent)}
+.demo-log li.done b{color:var(--ok)}
+.demo-note{margin:0;font-size:13px;color:var(--muted)}
+@media (max-width:640px){.demo-grid{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.demo-out p.typing::after{animation:none}}
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 32px}
+.skill h3{font-family:var(--body);font-size:15px;font-weight:600;margin-bottom:8px}
+.skill p{margin:0;color:var(--muted);font-size:15px}
+
+/* experience */
+.exp{display:grid;grid-template-columns:200px 1fr;gap:28px 40px}
+.exp ol{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.exp li{display:flex;justify-content:space-between;gap:16px;padding-block:14px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.exp li b{font-weight:600}
+.exp li span{color:var(--muted);font-size:15px}
+.domains{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.domains .tag{background:transparent;border:1px solid var(--line)}
+
+.jobs{list-style:none;margin:0;padding:0;display:grid}
+.job{display:grid;grid-template-columns:200px 1fr;gap:6px 40px;padding-block:20px;border-top:1px solid var(--line)}
+.job:first-child{border-top:0;padding-top:0}
+.when{font-family:var(--mono);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:3px}
+.what{min-width:0}
+.what h3{font-family:var(--body);font-size:17px;font-weight:600;line-height:1.35}
+.co{color:var(--accent);font-size:15px;margin-top:2px}
+.what p{margin:6px 0 0;color:var(--muted);font-size:15px;max-width:65ch}
+.edu{display:flex;gap:16px;align-items:baseline;flex-wrap:wrap;margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
+@media (max-width:760px){.job{grid-template-columns:1fr}}
+/* contact */
+.contact{display:grid;gap:20px}
+.contact h2{font-size:clamp(28px,5vw,48px);font-weight:800;max-width:20ch}
+.mail{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-family:var(--mono);font-size:clamp(15px,2.4vw,20px)}
+.mail code{user-select:all;padding:10px 14px;border:1px solid var(--line);border-radius:8px;background:var(--surface);word-break:break-all}
+.copy{font:500 14px var(--body);padding:9px 14px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.links{display:flex;flex-wrap:wrap;gap:12px 24px;font-size:15px}
+footer{padding-block:32px;border-top:1px solid var(--line);color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media (max-width:760px){
+  .case,.exp{grid-template-columns:1fr}
+  .skills{grid-template-columns:1fr 1fr}
+  .hero{padding-block:40px 32px}
+}
+@media (max-width:480px){.skills{grid-template-columns:1fr}.top nav{gap:14px}}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="mark"><b>Deepak Gehlot</b><span class="role">Senior Flutter Developer · AI &amp; Python</span><span class="avail"><i aria-hidden="true"></i>Open to new roles</span></div>
+    <nav aria-label="Sections">
+      <a href="#work">Work</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="hcontact">
+      <code id="hEmail">1deepakgehlot@gmail.com</code>
+      <button type="button" class="hbtn icon" data-copy="hEmail" aria-label="Copy email address" title="Copy email address"><span class="full"><svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 15V6a2 2 0 0 1 2-2h8" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><span class="short"><svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="2"/></svg></span></button>
+      <a class="hbtn" href="https://www.linkedin.com/in/deepak-gehlot-82933a91" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div class="label">Flutter · AI integration · Python · Based in India</div>
+    <h1>Deepak Gehlot<span>.</span></h1>
+    <p class="thesis">I build production Flutter apps, and the AI features and Python backends behind them.</p>
+    <p class="sub">Production apps across banking, enterprise SaaS, government, media and event-tech. My depth is in offline-first data layers, native platform channels on iOS and Android, and Clean Architecture that holds up at hundreds of screens. On the AI side I build retrieval (RAG) and LLM features with LangChain and OpenAI, served from FastAPI and streamed into Flutter.</p>
+    <div class="stats">
+      <div class="stat"><b>10+</b><span>years in software</span></div>
+      <div class="stat"><b>6+</b><span>years shipping Flutter</span></div>
+    </div>
+    <div class="cta">
+      <a class="btn" href="#work">See case studies</a>
+      <a class="btn ghost" href="#contact">Get in touch</a>
+    </div>
+  </div>
+
+  <section id="work">
+    <div class="sec-head">
+      <div class="label">Selected work</div>
+      <h2>Case studies</h2>
+    </div>
+    <div class="filters" role="group" aria-label="Filter case studies">
+      <button type="button" class="chip" data-f="all" aria-pressed="true">All <span>7</span></button>
+      <button type="button" class="chip" data-f="banking" aria-pressed="false">Banking <span>1</span></button>
+      <button type="button" class="chip" data-f="saas" aria-pressed="false">Event-tech &amp; SaaS <span>2</span></button>
+      <button type="button" class="chip" data-f="gov" aria-pressed="false">Government <span>1</span></button>
+      <button type="button" class="chip" data-f="media" aria-pressed="false">Media &amp; kids <span>2</span></button>
+      <button type="button" class="chip" data-f="ai" aria-pressed="false">AI &amp; Python <span>1</span></button>
+    </div>
+
+    <article class="case" data-cat="banking">
+      <div class="meta">
+        <div class="domain">Banking · South Africa · Glytex</div>
+        <div class="tags"><span class="tag">BLoC</span><span class="tag">Clean Architecture</span><span class="tag">Datadog</span><span class="tag">Feature flags</span></div>
+      </div>
+      <div class="body">
+        <h3>OM Bank — digital banking app</h3>
+        <p>OM Bank is Old Mutual's digital bank in South Africa. I work in the mobile team shipping features across the app, from solution design through implementation to production support.</p>
+        <ul>
+          <li>Joined solution design discussions with product, backend and QA before each feature was built.</li>
+          <li>Worked with the design team on the app's design system and turned it into reusable Flutter components.</li>
+          <li>Built features on Clean Architecture and BLoC, through GitHub pull requests, code review and CI build checks.</li>
+          <li>Shipped behind feature flags for controlled rollouts and environment-specific behaviour.</li>
+          <li>Used Datadog for monitoring, logging and production issue analysis, and handled maintenance work and ITSM tickets.</li>
+        </ul>
+        <div class="stores"><a class="store" href="https://play.google.com/store/apps/details?id=za.co.ombank.app.prd" target="_blank" rel="noopener"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path fill="currentColor" d="M4 2.5v19l10.2-9.5zM15.6 13.3 6.3 22l11.6-6.7zm0-2.6L17.9 8.6 6.3 2zM19.2 9.4l-2.5 2.6 2.5 2.6 2.4-1.4c.9-.5.9-1.9 0-2.4z"/></svg>Google Play</a></div>
+      </div>
+    </article>
+
+    <article class="case" data-cat="media">
+      <div class="meta">
+        <div class="domain">Music · Mobile + Web</div>
+        <div class="tags"><span class="tag">Jitsi</span><span class="tag">Platform views</span><span class="tag">Flutter Web</span><span class="tag">FFmpeg</span></div>
+      </div>
+      <div class="body">
+        <h3>eRecordStudio — rehearse and record together</h3>
+        <p>eRecordStudio lets musicians rehearse, record and share sessions online. I built the live video calling and recording pipeline inside the app, so bands never leave it to play together.</p>
+        <ul>
+          <li>Jitsi embedded through native platform views with method and event channels on iOS and Android, plus a Flutter Web build.</li>
+          <li>Per-participant camera recording and upload.</li>
+          <li>Server-side FFmpeg merge of all tracks into a single session video.</li>
+        </ul>
+        <div class="stores"><a class="store" href="https://play.google.com/store/apps/details?id=com.erecord.erecordstudio" target="_blank" rel="noopener"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path fill="currentColor" d="M4 2.5v19l10.2-9.5zM15.6 13.3 6.3 22l11.6-6.7zm0-2.6L17.9 8.6 6.3 2zM19.2 9.4l-2.5 2.6 2.5 2.6 2.4-1.4c.9-.5.9-1.9 0-2.4z"/></svg>Google Play</a><a class="store" href="https://erecordstudio.com/" target="_blank" rel="noopener"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm-9 9h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>erecordstudio.com</a></div>
+      </div>
+    </article>
+
+    <article class="case" data-cat="gov">
+      <div class="meta">
+        <div class="domain">Government · India · Happening Design</div>
+        <div class="tags"><span class="tag">Flutter</span><span class="tag">Payments</span><span class="tag">REST</span></div>
+      </div>
+      <div class="body">
+        <h3>MeeTicket — public ticketing for Telangana</h3>
+        <p>A Government of Telangana app, published by the ITE&amp;C department's MeeSeva citizen services. One app for entry tickets to parks and temples and transport tickets for metro and bus. I worked on its ticketing features and API-driven purchase flows.</p>
+        <div class="outcome"><span><b>100K+</b> downloads on Google Play</span></div>
+        <div class="stores"><a class="store" href="https://play.google.com/store/apps/details?id=com.me_ticket_app" target="_blank" rel="noopener"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path fill="currentColor" d="M4 2.5v19l10.2-9.5zM15.6 13.3 6.3 22l11.6-6.7zm0-2.6L17.9 8.6 6.3 2zM19.2 9.4l-2.5 2.6 2.5 2.6 2.4-1.4c.9-.5.9-1.9 0-2.4z"/></svg>Google Play</a></div>
+      </div>
+    </article>
+
+    <article class="case" data-cat="saas">
+      <div class="meta">
+        <div class="domain">Event-tech · SaaS · Happening Design</div>
+        <div class="tags"><span class="tag">Flutter Web</span><span class="tag">Firebase</span><span class="tag">REST</span></div>
+      </div>
+      <div class="body">
+        <h3>Eventum — event ticketing platform</h3>
+        <p>Eventum lets organisers build event pages, sell tickets, take payments and run onsite check-in, from yoga retreats to music festivals and conferences. I built responsive Flutter Web and mobile flows for event and session management and ticketing on Eventum and UMO Eventum.</p>
+        <div class="stores"><a class="store" href="https://www.eventum.co/" target="_blank" rel="noopener"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm-9 9h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>eventum.co</a></div>
+      </div>
+    </article>
+
+    <article class="case" data-cat="saas">
+      <div class="meta">
+        <div class="domain">Legal-tech · Happening Design</div>
+        <div class="tags"><span class="tag">Clean Architecture</span><span class="tag">REST</span></div>
+      </div>
+      <div class="body">
+        <h3>iPlanned — estate planning</h3>
+        <p>Online estate planning: people create and manage their will and estate plan securely. I built Flutter Web and mobile flows on a feature-based structure with REST APIs.</p>
+        <div class="stores"><a class="store" href="https://www.iplanned.io/" target="_blank" rel="noopener"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm-9 9h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>iplanned.io</a></div>
+      </div>
+    </article>
+
+    <article class="case" data-cat="media">
+      <div class="meta">
+        <div class="domain">Kids &amp; education · South Korea</div>
+        <div class="tags"><span class="tag">Flutter</span><span class="tag">Offline caching</span><span class="tag">In-app purchases</span></div>
+      </div>
+      <div class="body">
+        <h3>Webtoon — illustrated storybooks for children</h3>
+        <p>A children's storybook app from a South Korean publisher, pairing comic retellings of stories with illustrations. Storybooks are cached on the device so children can keep reading without downloading each book by hand, and full content unlocks through in-app purchases.</p>
+        <div class="outcome"><span><b>10K+</b> downloads on Google Play</span></div>
+        <div class="stores"><a class="store" href="https://play.google.com/store/apps/details?id=com.webtoonkids.webtoonkids" target="_blank" rel="noopener"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path fill="currentColor" d="M4 2.5v19l10.2-9.5zM15.6 13.3 6.3 22l11.6-6.7zm0-2.6L17.9 8.6 6.3 2zM19.2 9.4l-2.5 2.6 2.5 2.6 2.4-1.4c.9-.5.9-1.9 0-2.4z"/></svg>Google Play</a></div>
+      </div>
+    </article>
+
+    <article class="case" data-cat="ai">
+      <div class="meta">
+        <div class="domain">AI · Python · Side project</div>
+        <div class="tags"><span class="tag">FastAPI</span><span class="tag">LangChain</span><span class="tag">Pinecone</span><span class="tag">Hive</span></div>
+      </div>
+      <div class="body">
+        <h3>AI Knowledge Assistant — RAG over Flutter docs</h3>
+        <p>A full-stack retrieval app: Python FastAPI backend with LangChain, OpenAI embeddings and a Pinecone index, deployed on Railway, and a Flutter client in strict Clean Architecture.</p>
+        <ul>
+          <li>Streams answers as newline-delimited JSON, parsed incrementally into BLoC state with no full-response buffering.</li>
+          <li>Typed failures through <code>Either&lt;Failure, T&gt;</code>; every Dio error maps to a domain failure.</li>
+          <li>Cache-aside query history in Hive, so past answers work offline.</li>
+        </ul>
+        <div class="demo" aria-label="Streaming demo">
+          <div class="demo-head"><span class="label">Try it · simulated stream</span><button type="button" class="copy" id="runDemo">Run query</button></div>
+          <div class="demo-q"><span class="label">Query</span><select id="demoQ" aria-label="Sample question"></select></div>
+          <div class="demo-grid">
+            <div class="demo-out"><span class="label">Flutter client</span><p id="demoAnswer"></p></div>
+            <div class="demo-log"><span class="label">BLoC states</span><ol id="demoLog"></ol></div>
+          </div>
+          <p class="demo-note">A replay of how the app renders a streamed answer. Chunks arrive as newline-delimited JSON and each one becomes a new BLoC state.</p>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <section id="skills">
+    <div class="sec-head">
+      <div class="label">What I bring</div>
+      <h2>Skills</h2>
+    </div>
+    <div class="skills">
+      <div class="skill"><h3>Architecture</h3><p>Clean Architecture and MVVM across 500+ screens, dependency injection with GetIt, feature-first modules.</p></div>
+      <div class="skill"><h3>State management</h3><p>BLoC and Cubit by default, Provider and Riverpod where the codebase calls for it.</p></div>
+      <div class="skill"><h3>Offline-first data</h3><p>Hive, SQLite, sync queues, conflict handling, cache-aside reads.</p></div>
+      <div class="skill"><h3>Native integration</h3><p>Custom plugins, platform channels and platform views in Kotlin and Swift, device-specific debugging.</p></div>
+      <div class="skill"><h3>Security</h3><p>AES-256 at rest, short-lived JWTs, certificate pinning, BFF pattern for Flutter Web.</p></div>
+      <div class="skill"><h3>Performance</h3><p>Rebuild profiling, memory and startup time, app size, DevTools traces.</p></div>
+      <div class="skill"><h3>Python backends</h3><p>FastAPI, async SQLAlchemy, Pydantic v2, PostgreSQL, Railway deploys, plus Firebase and REST integration.</p></div>
+      <div class="skill"><h3>Delivery</h3><p>Play Store and App Store releases, CI/CD, unit, widget and integration tests.</p></div>
+      <div class="skill"><h3>AI and LLM apps</h3><p>RAG with LangChain, OpenAI embeddings and Pinecone, LangGraph agents, streamed responses in Flutter UIs.</p></div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="sec-head">
+      <div class="label">Where I've worked</div>
+      <h2>Experience</h2>
+    </div>
+    <ol class="jobs">
+      <li class="job">
+        <div class="when">Dec 2025 – Present</div>
+        <div class="what"><h3>Senior Flutter Developer</h3><div class="co">Glytex Tech Consultancy · Remote</div><p>Enterprise mobile banking (OM Bank) with Flutter, Clean Architecture and BLoC. GitHub PR workflow, code review, CI, Datadog, feature flags and biometric authentication.</p></div>
+      </li>
+      <li class="job">
+        <div class="when">Dec 2022 – Dec 2025</div>
+        <div class="what"><h3>Senior Software Developer, Flutter</h3><div class="co">Happening Design · Remote</div><p>Flutter Web and mobile apps for event-tech and SaaS: iPlanned, Eventum, UMO Eventum and MeeTicket. Ticketing, event and session workflows, REST, Firebase and third-party SDKs.</p></div>
+      </li>
+      <li class="job">
+        <div class="when">Apr 2018 – Nov 2022</div>
+        <div class="what"><h3>Senior Mobile Application Developer, Flutter / Android</h3><div class="co">Worthply Technologies Pvt. Ltd. · Indore</div><p>Cross-platform Flutter apps for Android and iOS with Provider and BLoC/Cubit. REST APIs, Firebase notifications, maps and location, payment gateways and media features.</p></div>
+      </li>
+      <li class="job">
+        <div class="when">Dec 2016 – Apr 2018</div>
+        <div class="what"><h3>Android Developer</h3><div class="co">Rudiment Website Solution · Indore</div><p>Native Android apps in Java with API integration and UI implementation for client projects.</p></div>
+      </li>
+      <li class="job">
+        <div class="when">Dec 2014 – Dec 2016</div>
+        <div class="what"><h3>Junior Android Developer</h3><div class="co">Widevision Technologies · Indore</div><p>Started in native Android with Java and the Android SDK: UI, backend API integration and app maintenance.</p></div>
+      </li>
+    </ol>
+    <div class="edu"><span class="label">Education</span><span>B.E. Computer Science, 2014</span></div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="label">Contact</div>
+    <h2>Available for full-time and contract roles, remote or on-site.</h2>
+    <p style="margin:0;color:var(--muted);max-width:60ch">Based in Indore, India. Comfortable working US Eastern or Pacific overlap hours for remote teams.</p>
+    <div class="contact-rows">
+      <div class="mail"><code id="email">1deepakgehlot@gmail.com</code><button class="copy" type="button" data-copy="email">Copy email</button></div>
+      <div class="mail"><code id="phone">+91 88279 87615</code><button class="copy" type="button" data-copy="phone">Copy phone</button></div>
+    </div>
+    <div class="stores"><a class="store" href="https://www.linkedin.com/in/deepak-gehlot-82933a91" target="_blank" rel="noopener">LinkedIn →</a></div>
+  </section>
+
+  <footer>
+    <span>© 2026 Deepak Gehlot</span>
+    <a href="https://www.linkedin.com/in/deepak-gehlot-82933a91" target="_blank" rel="noopener">LinkedIn</a>
+  </footer>
+</div>
+
+<script>
+document.querySelectorAll('[data-copy]').forEach(function(btn){
+  var label=btn.innerHTML, el=document.getElementById(btn.dataset.copy);
+  btn.addEventListener('click',function(){
+    function done(){if(btn.classList.contains('icon'))btn.innerHTML='<svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5 9-10" fill="none" stroke="currentColor" stroke-width="2.4"/></svg>';else btn.textContent='Copied';setTimeout(function(){btn.innerHTML=label},1600)}
+    function fallback(){var r=document.createRange();r.selectNodeContents(el);var x=getSelection();x.removeAllRanges();x.addRange(r);btn.textContent='Selected';setTimeout(function(){btn.innerHTML=label},1600)}
+    try{navigator.clipboard.writeText(el.textContent).then(done,fallback)}catch(e){fallback()}
+  });
+});
+
+(function(){
+  var chips=document.querySelectorAll('.chip'), cases=document.querySelectorAll('.case[data-cat]');
+  chips.forEach(function(c){c.addEventListener('click',function(){
+    var f=c.dataset.f;
+    chips.forEach(function(x){x.setAttribute('aria-pressed',x===c?'true':'false')});
+    cases.forEach(function(a){a.hidden=!(f==='all'||a.dataset.cat===f)});
+  })});
+
+  var QA=[
+    ['When should I use a GlobalKey?','Use a GlobalKey when a widget must keep its state while moving to another part of the tree, or when you need its State or BuildContext from outside, such as validating a Form. GlobalKeys are relatively expensive, so prefer a ValueKey when you only need to preserve state while reordering a list.'],
+    ['How do I stop unnecessary widget rebuilds?','Push state down so only the widgets that depend on it rebuild. Use const constructors, split large build methods into smaller widgets, and use BlocSelector or buildWhen so a widget rebuilds only when the slice of state it shows actually changes.'],
+    ['Isolate or compute() for JSON parsing?','For a one-off parse of a large payload, compute() is the simplest choice because it spawns an isolate, runs the function and returns the result. For repeated heavy work, keep a long-lived isolate and talk to it through ports so you avoid paying the spawn cost on every call.']
+  ];
+  var sel=document.getElementById('demoQ'), out=document.getElementById('demoAnswer'), log=document.getElementById('demoLog'), btn=document.getElementById('runDemo');
+  QA.forEach(function(q,i){var o=document.createElement('option');o.value=i;o.textContent=q[0];sel.appendChild(o)});
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches, timer=null;
+  function addLog(state,detail,done){var li=document.createElement('li');if(done)li.className='done';li.innerHTML='<b>'+state+'</b> '+detail;log.appendChild(li);log.scrollTop=log.scrollHeight}
+  function show(i){ // resting state: finished answer
+    clearInterval(timer);out.classList.remove('typing');out.textContent=QA[i][1];log.innerHTML='';
+    var n=Math.ceil(QA[i][1].split(' ').length/4);
+    addLog('QueryLoading','');addLog('QueryStreaming',n+' chunks');addLog('QuerySuccess','cached to Hive',true);
+  }
+  function run(){
+    var i=+sel.value, words=QA[i][1].split(' '), k=0, chunk=0;
+    clearInterval(timer);out.textContent='';log.innerHTML='';
+    addLog('QueryLoading','POST /api/query/stream');
+    if(reduce){show(i);return}
+    out.classList.add('typing');btn.disabled=true;
+    timer=setInterval(function(){
+      out.textContent+=(k?' ':'')+words.slice(k,k+4).join(' ');k+=4;chunk++;
+      addLog('QueryStreaming','chunk '+chunk);
+      if(k>=words.length){clearInterval(timer);out.classList.remove('typing');addLog('QuerySuccess','cached to Hive',true);btn.disabled=false}
+    },140);
+  }
+  btn.addEventListener('click',run);
+  sel.addEventListener('change',function(){btn.disabled=false;run()});
+  show(0);
+})();
+</script>
+</body>
+</html>
